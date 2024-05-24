@@ -1,6 +1,6 @@
 environment: beta
 report_name: pipelineCreation
-feature: feature/sample.feature
+feature: src/test/resources/feature
 tags: ''
 jewel_screen_shots: y
 console_report: n
