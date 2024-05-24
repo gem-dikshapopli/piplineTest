@@ -4,18 +4,18 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
-
+- main  # Set the branch to trigger the pipeline on
+ 
 pool:
-  vmImage: 'windows-latest'
-
+  vmImage: 'windows-latest'  # Use a Windows agent
+ 
 steps:
+ 
 - task: JavaToolInstaller@0
   inputs:
     versionSpec: '11'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
-
-- script: |
-    'mvn clean test -Dcucumber.filter.tags=$(CUCUMBER_TAGS)'
-  displayName: 'Run Selenium Test'
+ 
+- script: 'mvn clean test'  # Command to build and run your Selenium tests using Maven
+  displayName: 'Run Selenium Tests'
